@@ -1,0 +1,41 @@
+.main-layout {
+  display: grid;
+  grid-template-columns: $layoutPadding 1fr $layoutPadding;
+
+  > * {
+    grid-column: 2;
+  }
+
+  > *.full {
+    grid-column: 1 / -1;
+  }
+
+  @include for-narrow-layout {
+    @include layoutGTC($break-narrow);
+  }
+
+  @include for-normal-layout {
+    @include layoutGTC($break-normal);
+  }
+
+  @include for-wide-layout {
+    @include layoutGTC($break-wide);
+  }
+}
+
+.submit-btn {
+  cursor: pointer;
+  border-radius: 3px;
+  line-height: 20px;
+  padding: 6px 12px;
+  transition: background-color 85ms ease;
+  font-size: 14px;
+  border: none;
+  color: #172b4d;
+  background-color: whitesmoke;
+  &:hover,
+  &:focus {
+    color: whitesmoke;
+    background-color: #0079bf;
+  }
+}

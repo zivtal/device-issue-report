@@ -1,0 +1,21 @@
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.full {
+  width: 100%;
+}
